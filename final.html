@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Pawar - Portfolio + Shop</title>
+
+  <!-- Tailwind + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Custom Styles -->
+  <style>
+    body.dark-mode {
+      background-color: #111827;
+      color: #f9fafb;
+    }
+    .card, .highlight {
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    body.dark-mode .card, body.dark-mode .highlight {
+      background-color: #1f2937;
+      color: #f9fafb;
+    }
+    .profile1 {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .toggle-button {
+      padding: 0.5rem 1rem;
+      background: #07b18f;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .email-link, .github-button {
+      color: #07b18f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Dark Mode Toggle -->
+  <div class="p-4 flex justify-end">
+    <button id="theme-toggle" class="toggle-button">🌙 Dark Mode</button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md p-4 sticky top-0 z-50 flex justify-center gap-4 flex-wrap">
+    <a href="#welcome" class="hover:text-[#07b18f] font-semibold">Welcome</a>
+    <a href="#about" class="hover:text-[#07b18f] font-semibold">About</a>
+    <a href="#achievements" class="hover:text-[#07b18f] font-semibold">Achievements</a>
+    <a href="#goals" class="hover:text-[#07b18f] font-semibold">Goals</a>
+    <a href="#personal" class="hover:text-[#07b18f] font-semibold">Personal</a>
+    <a href="#best-practices" class="hover:text-[#07b18f] font-semibold">Practices</a>
+    <a href="#shop" class="hover:text-[#07b18f] font-semibold">Shop 🛒</a>
+    <a href="#contact" class="hover:text-[#07b18f] font-semibold">Contact</a>
+  </nav>
+
+  <div class="container mx-auto px-4">
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="my-8 text-center">
+      <img src="profile1.png" alt="Harsh Pawar Photo" class="profile1 mx-auto" />
+      <h1 class="text-3xl font-bold">Welcome to My Portfolio</h1>
+      <p class="mt-2">Hello, I'm <strong>Harsh Pawar</strong>. Here's my journey, achievements, and aspirations!</p>
+      <video class="mx-auto my-4" width="700" height="400" controls>
+        <source src="portfoliovideo.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card my-8">
+      <h2 class="text-xl font-bold mb-2">About Me</h2>
+      <ul class="list-disc pl-5">
+        <li><strong>Name:</strong> Harsh Pawar</li>
+        <li><strong>Location:</strong> Mumbai, India</li>
+        <li><strong>Education:</strong> Computer Engineering, SJCEM</li>
+        <li><strong>Languages Known:</strong> C, SQL, Python</li>
+      </ul>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="card my-8">
+      <h2 class="text-xl font-bold mb-2">Achievements</h2>
+      <ul class="list-disc pl-5">
+        <li>Built a Currency Exchange in Python</li>
+        <li>Built an Organ Donation Application in .NET with SQL</li>
+      </ul>
+    </section>
+
+    <!-- Goals -->
+    <section id="goals" class="card my-8">
+      <h2 class="text-xl font-bold mb-2">Future Goals</h2>
+      <p>I aim to become a skilled Data Engineer who builds scalable, efficient, and secure data pipelines to power decision-making.</p>
+    </section>
+
+    <!-- Personal -->
+    <section id="personal" class="card my-8">
+      <h2 class="text-xl font-bold mb-2">Personal Side</h2>
+      <p><strong>Hobbies:</strong> Reading, Gaming</p>
+      <p><strong>Role Models:</strong> Steve Jobs, A.P.J. Abdul Kalam</p>
+      <p><strong>Favorite Book:</strong> "Deep Work" by Cal Newport</p>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="card my-8">
+      <h2 class="text-xl font-bold mb-2">Best Practices Followed</h2>
+      <ul class="list-disc pl-5">
+        <li>Semantic HTML5 structure</li>
+        <li>CSS palette #07b18f</li>
+        <li>Responsive layout</li>
+        <li>External CSS</li>
+        <li>Alt text for accessibility</li>
+        <li>Deployed via GitHub Pages</li>
+      </ul>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="my-8">
+      <h2 class="text-3xl font-bold text-center text-[#07b18f] mb-6">🧢 Trendy Specs Shop</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Repeat for each product -->
+        <div class="bg-white rounded-lg shadow p-4" data-name="Cool Specs A" data-price="99">
+          <img src="shop1.jpg" alt="Specs A" class="w-full rounded mb-2">
+          <h3 class="font-semibold text-lg">Cool Specs A</h3>
+          <p class="text-gray-500">$99</p>
+          <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4" data-name="Cool Specs B" data-price="79">
+          <img src="shop2.jpg" alt="Specs B" class="w-full rounded mb-2">
+          <h3 class="font-semibold text-lg">Cool Specs B</h3>
+          <p class="text-gray-500">$79</p>
+          <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4" data-name="Cool Specs C" data-price="89">
+          <img src="shop3.jpg" alt="Specs C" class="w-full rounded mb-2">
+          <h3 class="font-semibold text-lg">Cool Specs C</h3>
+          <p class="text-gray-500">$89</p>
+          <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Cart -->
+      <div class="mt-6 bg-white p-4 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Cart 🛒</h3>
+        <div id="cart-items" class="space-y-2"></div>
+        <p class="mt-2">Total: $<span id="cart-total">0</span></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card my-10">
+      <h2 class="text-xl font-bold mb-2"><i class="fas fa-envelope"></i> Contact Me</h2>
+      <p>Email: <a href="mailto:123harsh2069@sjcem.edu.in" class="email-link">123harsh2069@sjcem.edu.in</a></p>
+      <p>Phone: <a href="tel:+917058066141" class="email-link">+91 7058066141</a></p>
+
+      <div class="mt-4">
+        <h3 class="font-semibold"><i class="fab fa-github"></i> GitHub Profile</h3>
+        <a href="https://github.com/Harsh4912p" target="_blank" class="github-button">Visit GitHub</a>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold text-[#07b18f] mb-2"><i class="fas fa-map-marker-alt"></i> My Location</h3>
+        <iframe706045231892034
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.1545023702033!2d72.78093297494425!3d19.706045231892034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c92fbd91e67%3A0x2a3ce68676417a45!2sSt.%20John%20College%20of%20Engineering%20and%20Management!5e0!3m2!1sen!2sin!4v1747732838866!5m2!1sen!2sin"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+
+    let cartItems = [];
+
+    function addToCart(button) {
+      const product = button.closest('[data-name]');
+      const name = product.dataset.name;
+      const price = parseFloat(product.dataset.price);
+      cartItems.push({ name, price });
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      const totalDisplay = document.getElementById('cart-total');
+      container.innerHTML = '';
+      let total = 0;
+      cartItems.forEach((item, i) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.classList.add('flex', 'justify-between');
+        div.innerHTML = `
+          <span>${item.name} - $${item.price}</span>
+          <button onclick="removeItem(${i})" class="text-red-500">✖</button>
+        `;
+        container.appendChild(div);
+      });
+      totalDisplay.textContent = total.toFixed(2);
+    }
+
+    function removeItem(index) {
+      cartItems.splice(index, 1);
+      renderCart();
+    }
+  </script>
+</body>
+</html>
